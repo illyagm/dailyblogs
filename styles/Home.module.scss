@@ -13,4 +13,7 @@
   grid-gap: 3rem;
   margin: 0 25%;
   margin-bottom: 3rem;
+  @media screen and (max-width: 768px) { 
+   margin: 1rem 0;
+  }
 }
