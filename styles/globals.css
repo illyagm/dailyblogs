@@ -9,7 +9,7 @@
 }
 
 a {
-  color: #E2B658;
+  color: #E2B658 !important;
   font-size: unset !important;
 }
 
