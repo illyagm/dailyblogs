@@ -52,8 +52,8 @@ export default function Home({ posts }) {
       </Head>
 
       <Header />
+      <h1 className={styles.homepagetitle}>Home</h1>
       <main className={styles.main}>
-
         {posts.map((post) => (
           <BlogCard
             title={post.title}
