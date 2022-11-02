@@ -13,6 +13,10 @@ a {
   font-size: unset !important;
 }
 
+img {
+  border-radius: 2%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }

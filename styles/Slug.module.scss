@@ -63,6 +63,12 @@
   font-size: xx-large;
 }
 
+@media screen and (max-width: 992px) {
+  .blog {
+    margin: 2.5% 12%;
+  }  
+}
+
 @media screen and (max-width: 768px) {
   .blog {
     margin: 0rem 2rem;
