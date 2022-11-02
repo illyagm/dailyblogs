@@ -65,10 +65,10 @@ const article = ({ post }) => {
         <div>
             <Header />
             <main className={styles.blog}>
-                <img src={post.coverPhoto.url} className={styles.cover} alt='' />
+                <Image src={post.coverPhoto.url} className={styles.cover} alt='' />
                 <div className={styles.title}>
                     <div className={styles.authdetails}>
-                        <img src={post.author.avatar.url} alt='' />
+                        <Image src={post.author.avatar.url} alt='' />
                         <div className={styles.authtext}>
                             <h6>
                                 By {post.author.name}
