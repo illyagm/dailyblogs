@@ -6,7 +6,7 @@ const nextConfig = {
 
 module.exports = nextConfig
 
-// next.config.js
+// CORS
 module.exports = {
   async headers() {
     return [
@@ -23,3 +23,10 @@ module.exports = {
     ]
   }
 };
+
+// images
+module.exports = {
+  images: {
+    domains: ['media.graphassets.com'],
+  },
+}

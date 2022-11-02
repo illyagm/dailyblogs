@@ -8,6 +8,15 @@
   color: rgb(50, 50, 50);
 }
 
+a {
+  color: #E2B658 !important;
+  font-size: unset !important;
+}
+
+img {
+  border-radius: 2%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
