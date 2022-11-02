@@ -1,5 +1,21 @@
 .blog {
   margin: 2.5% 25%;
+  ul {
+    li {
+      padding: 0.25rem;
+      color: #E2B658;
+    }
+  }
+  table {
+    width: 100%;
+    tbody {
+      border-bottom: 1px #E2B658 solid;
+      tr:first-child {
+        padding-top: 0.15rem;
+        border-bottom: 1px #E2B658 solid;
+      }
+    }
+  }
 }
 
 .navback {
