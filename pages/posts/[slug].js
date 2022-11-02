@@ -65,9 +65,6 @@ const article = ({ post }) => {
         <div>
             <Header />
             <main className={styles.blog}>
-                <Link href={'/'}>
-                    <div className={styles.navback}>Go back</div>
-                </Link>
                 <img src={post.coverPhoto.url} className={styles.cover} alt='' />
                 <div className={styles.title}>
                     <div className={styles.authdetails}>

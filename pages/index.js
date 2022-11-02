@@ -52,7 +52,7 @@ export default function Home({ posts }) {
       </Head>
 
       <Header />
-      <h1 className={styles.homepagetitle}>Home</h1>
+      <h1 className={styles.homepagetitle}>Inicio</h1>
       <main className={styles.main}>
         {posts.map((post) => (
           <BlogCard
