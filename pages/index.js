@@ -58,12 +58,11 @@ export default function Home({ posts }) {
         <Container>
           <Row>
             {posts.map((post) => (
-              <Col md={6} lg={4}>
+              <Col md={6} lg={4} key={post.id}>
                 <BlogCard
                   title={post.title}
                   author={post.author}
                   coverPhoto={post.coverPhoto}
-                  key={post.id}
                   datePublished={post.datePublished}
                   slug={post.slug} />
               </Col>
