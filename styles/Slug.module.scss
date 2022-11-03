@@ -1,25 +1,38 @@
 .blog {
-  margin: 2.5% 25%;
+  margin: 2.5% 10%;
+
   ul {
     li {
       padding: 0.25rem;
       color: #E2B658;
     }
   }
+
   table {
     width: 100%;
+
     tbody {
       border-bottom: 1px #E2B658 solid;
+
       tr:first-child {
         padding-top: 0.15rem;
         border-bottom: 1px #E2B658 solid;
       }
     }
-  }  
+  }
+
   a {
     color: #E2B658 !important;
     font-size: unset !important;
   }
+
+  h3 {
+    margin: 2rem 0;
+  }
+}
+
+.text {
+  margin: 2.5% 12%;
 }
 
 .navback {
@@ -78,15 +91,14 @@
 }
 
 .posttitle {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   font-size: xx-large;
+  text-align: center;
 }
 
 @media screen and (max-width: 992px) {
   .blog {
     margin: 2.5% 12%;
-  }  
+  }
 }
 
 @media screen and (max-width: 768px) {

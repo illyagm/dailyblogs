@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import { GraphQLClient, gql } from 'graphql-request';
 import BlogCard from '../components/BlogCard';
+import WelcomeComponent from '../components/HomeWelcome';
 import Header from '../components/Header';
 import Container from 'react-bootstrap/Container';
 import { Col, Row } from 'react-bootstrap';
@@ -55,6 +56,7 @@ export default function Home({ posts }) {
 
       <Header />
       <main>
+        <WelcomeComponent />
         <Container>
           <Row>
             {posts.map((post) => (
