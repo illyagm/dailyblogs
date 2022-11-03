@@ -8,9 +8,18 @@
   color: rgb(50, 50, 50);
 }
 
-a {
-  color: #E2B658 !important;
-  font-size: unset !important;
+.navbar {
+  padding-top: 1.1rem !important;
+  padding-bottom: 1.1rem !important;
+  padding-left: 5rem !important;
+  padding-right: 2.5rem !important;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
 }
 
 img {
