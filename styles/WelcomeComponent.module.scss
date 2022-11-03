@@ -17,5 +17,10 @@
     top: 20%;
     @media screen and (max-width: 1020px) {
         position: relative;
+        padding: 0 3rem;
       }
 }
+
+.accenttext {
+    color: #E2B658 !important;
+  }

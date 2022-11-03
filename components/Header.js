@@ -7,9 +7,9 @@ import styles from '../styles/Header.module.scss';
 
 const header = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" className={styles.header}>
             <Container fluid>
-                <Navbar.Brand href="#" className={styles.title}>CryptoXChange</Navbar.Brand>
+                <Navbar.Brand href="/" className={styles.title}>CryptoXChange</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -23,11 +23,11 @@ const header = () => {
                     <Form className="d-flex">
                         <Form.Control
                             type="search"
-                            placeholder="Search"
+                            placeholder="Mejor exchange ..."
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-success">Search</Button>
+                        <Button variant="outline-secondary" className={styles.accentbutton}>Buscar</Button>
                     </Form>
                 </Navbar.Collapse>
             </Container>

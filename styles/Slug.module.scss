@@ -1,5 +1,6 @@
 .blog {
   margin: 2.5% 10%;
+  line-height: 1.6rem !important;
 
   ul {
     li {
@@ -32,7 +33,7 @@
 }
 
 .text {
-  margin: 2.5% 12%;
+  margin: 2.5% 25%;
 }
 
 .navback {
@@ -99,6 +100,9 @@
   .blog {
     margin: 2.5% 12%;
   }
+  .text {
+    margin: 2.5% 6%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -112,5 +116,8 @@
 
   .content img {
     width: 100%;
+  }
+  .text {
+    margin: 2.5% 0%;
   }
 }

@@ -27,6 +27,7 @@ img {
 
 body {
   font-family: "Roboto", sans-serif;
+  line-height: 1.6rem !important;
 }
 
 nav {
@@ -80,5 +81,26 @@ a {
   }
   nav {
     padding: 3rem 0rem;
+  }
+}
+
+
+// text accents
+
+.title {
+  line-height: 1.6rem;
+  &.light {
+    font-weight: bold;
+  }
+}
+
+.date-published {
+  font-size: 0.75rem !important;
+  color: #E2B658 !important;
+}
+
+.container-blogs {
+  @media screen and (min-width: 1500px) {
+    margin-top: -9rem;
   }
 }
