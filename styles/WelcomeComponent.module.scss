@@ -1,0 +1,21 @@
+.welcomemain {
+    background-color: white;
+    text-align: center;
+    h3 {
+        font-weight: 100;
+    }
+    span {
+        font-weight: 200;
+    }
+    @media screen and (max-width: 1020px) {
+        margin-top: -5rem;
+    }
+}
+
+.welcometext {
+    position: absolute;
+    top: 20%;
+    @media screen and (max-width: 1020px) {
+        position: relative;
+      }
+}
