@@ -57,7 +57,7 @@ export default function Home({ posts }) {
       <Header />
       <main>
         <WelcomeComponent />
-        <Container>
+        <Container className='container-blogs'>
           <Row>
             {posts.map((post) => (
               <Col md={6} lg={4} key={post.id}>
