@@ -3,6 +3,8 @@ import styles from '../styles/Home.module.scss'
 import { GraphQLClient, gql } from 'graphql-request';
 import BlogCard from '../components/BlogCard';
 import Header from '../components/Header';
+import Container from 'react-bootstrap/Container';
+import { Col, Row } from 'react-bootstrap';
 
 
 const graphcms = new GraphQLClient(
@@ -52,17 +54,22 @@ export default function Home({ posts }) {
       </Head>
 
       <Header />
-      <h1 className={styles.homepagetitle}>Inicio</h1>
-      <main className={styles.main}>
-        {posts.map((post) => (
-          <BlogCard
-            title={post.title}
-            author={post.author}
-            coverPhoto={post.coverPhoto}
-            key={post.id}
-            datePublished={post.datePublished}
-            slug={post.slug} />
-        ))}
+      <main>
+        <Container>
+          <Row>
+            {posts.map((post) => (
+              <Col md={6} lg={4}>
+                <BlogCard
+                  title={post.title}
+                  author={post.author}
+                  coverPhoto={post.coverPhoto}
+                  key={post.id}
+                  datePublished={post.datePublished}
+                  slug={post.slug} />
+              </Col>
+            ))}
+          </Row>
+        </Container>
       </main>
 
       <footer className={styles.footer}>
