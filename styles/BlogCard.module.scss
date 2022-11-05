@@ -16,9 +16,10 @@
   }
 
   .imgContainer {
+    overflow-y: hidden;
     position: relative;
     width: 100%;
-    height: auto;
+    height: 50%;
   }
 
   img:hover {
