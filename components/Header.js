@@ -10,8 +10,8 @@ import WelcomeComponent from '../components/HomeWelcome';
 
 const header = () => {
     const router = useRouter()
-        return (
-        <Row className={ router.pathname == '/' ? '' : 'g-0' }>
+    return (
+        <Row className={router.pathname == '/' ? '' : 'g-0'}>
             <Navbar bg="light" expand="lg" className={styles.header}>
                 <Container fluid>
                     <Navbar.Brand href="/" className={styles.title}>CryptoXChange</Navbar.Brand>
@@ -30,8 +30,8 @@ const header = () => {
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
-            </Navbar> 
-            { router.pathname == '/' ? <WelcomeComponent /> : '' }
+            </Navbar>
+            {router.pathname == '/' ? <WelcomeComponent /> : ''}
         </Row>
     );
 }

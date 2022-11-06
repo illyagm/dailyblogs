@@ -1,6 +1,7 @@
 import styles from '../../styles/Slug.module.scss';
 import { GraphQLClient, gql } from 'graphql-request';
 import Header from '../../components/Header';
+import Head from 'next/head'
 
 const graphcms = new GraphQLClient(
     "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl8fnvnzr3uai01ul8vtu5t4j/master"
@@ -27,6 +28,7 @@ query Post($slug: String!) {
             id,
             url
         }
+        seoDescription
     }
 }
 `;
@@ -60,31 +62,40 @@ export async function getStaticProps({ params }) {
 }
 
 const article = ({ post }) => {
+    article.title = post.title;
     return (
-        <div>
-            <Header />
-            <main className={styles.blog}>
-                <h3 className={styles.posttitle}>{post.title}</h3>
-                <div className={styles.text}>
-                    <img src={post.coverPhoto.url} className={styles.cover} alt='' />
-                    <div className={styles.title}>
-                        <div className={styles.authdetails}>
-                            <img src={post.author.avatar.url} alt='' />
-                            <div className={styles.authtext}>
-                                <h6>
-                                    By {post.author.name}
-                                </h6>
-                                <h6 className={styles.date}>
-                                    {post.datePublished}
-                                </h6>
+        <>
+            <Head>
+                <title>{post.title}</title>
+                <meta name="description"
+                    content={post.seoDescription} />
+                <link rel="icon" href="/logoCXC.png" />
+            </Head>
+            <div>
+                <Header />
+                <main className={styles.blog}>
+                    <h3 className={styles.posttitle}>{post.title}</h3>
+                    <div className={styles.text}>
+                        <img src={post.coverPhoto.url} className={styles.cover} alt='' />
+                        <div className={styles.title}>
+                            <div className={styles.authdetails}>
+                                <img src={post.author.avatar.url} alt='' />
+                                <div className={styles.authtext}>
+                                    <h6>
+                                        By {post.author.name}
+                                    </h6>
+                                    <h6 className={styles.date}>
+                                        {post.datePublished}
+                                    </h6>
+                                </div>
                             </div>
                         </div>
+                        <div className={styles.content} dangerouslySetInnerHTML={{ __html: [post.content.html] }}>
+                        </div>
                     </div>
-                    <div className={styles.content} dangerouslySetInnerHTML={{ __html: [post.content.html] }}>
-                    </div>
-                </div>
-            </main>
-        </div>
+                </main>
+            </div>
+        </>
     );
 }
 
