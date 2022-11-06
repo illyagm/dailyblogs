@@ -3,13 +3,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from '../styles/Header.module.scss';
+import { useRouter } from 'next/router'
 // Component import
 import CryptoPrices from './CryptoPrices';
 import WelcomeComponent from '../components/HomeWelcome';
 
 const header = () => {
-    return (
-        <Row>
+    const router = useRouter()
+        return (
+        <Row className={ router.pathname == '/' ? '' : 'g-0' }>
             <Navbar bg="light" expand="lg" className={styles.header}>
                 <Container fluid>
                     <Navbar.Brand href="/" className={styles.title}>CryptoXChange</Navbar.Brand>
@@ -29,7 +31,7 @@ const header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar> 
-            <WelcomeComponent />
+            { router.pathname == '/' ? <WelcomeComponent /> : '' }
         </Row>
     );
 }

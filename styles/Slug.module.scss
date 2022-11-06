@@ -32,10 +32,6 @@
   }
 }
 
-.text {
-  margin: 2.5% 25%;
-}
-
 .navback {
   margin-bottom: 0.5rem;
 }
@@ -96,9 +92,13 @@
   text-align: center;
 }
 
+.text {
+  margin: 2.5% 18%;
+}
+
 @media screen and (max-width: 992px) {
   .blog {
-    margin: 2.5% 12%;
+    margin: 2.5% 0%;
   }
   .text {
     margin: 2.5% 6%;
