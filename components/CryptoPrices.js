@@ -1,11 +1,4 @@
 import { useEffect, useState } from "react";
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import styles from '../styles/Header.module.scss';
-import Container from 'react-bootstrap/Container';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-
 
 const cryptoPrices = () => {
 
@@ -79,16 +72,14 @@ const cryptoPrices = () => {
 
     // map data
 
-    let arrowUp = <ArrowUpwardIcon sx={{ fontSize: 15 }} color="success" />;
-    let arrowDown = <ArrowDownwardIcon sx={{ fontSize: 15 }} color="red" />;
     return (
         <div className="crypto-prices">
-            <div> BTC {parseFloat(btcPrice).toFixed(2)} $</div>
-            <div> ETH {parseFloat(ethPrice).toFixed(2)} $</div>
-            <div> DOT {parseFloat(dotPrice).toFixed(2)} $</div>
-            <div> DOGE {parseFloat(dogePrice).toFixed(2)} $</div>
-            <div> MATIC {parseFloat(maticPrice).toFixed(2)} $</div>
-            <div> ADA {parseFloat(adaPrice).toFixed(2)} $</div>
+            <div><span>BTC</span> {parseFloat(btcPrice).toFixed(2)} $</div>
+            <div><span>ETH</span> {parseFloat(ethPrice).toFixed(2)} $</div>
+            <div><span>DOT</span> {parseFloat(dotPrice).toFixed(2)} $</div>
+            <div><span>DOGE</span> {parseFloat(dogePrice).toFixed(2)} $</div>
+            <div><span>MATIC</span> {parseFloat(maticPrice).toFixed(2)} $</div>
+            <div><span>ADA</span> {parseFloat(adaPrice).toFixed(2)} $</div>
         </div>
     )
 }

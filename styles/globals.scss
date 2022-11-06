@@ -8,6 +8,12 @@
   color: rgb(50, 50, 50);
 }
 
+.container-fluid {
+  &.home {
+    padding: 0;
+  }
+}
+
 .price-color {
   &.red {
     color: red;
@@ -20,15 +26,23 @@
 
 
 .crypto-prices {
+  white-space: nowrap;
   display: flex;
   justify-content: center;
   background-color: #F8F9FA !important;
   text-align: center;
   font-size: 0.75rem;
   font-weight: 100;
+  overflow: auto;
   div {
-    margin-left: 1rem;
+    margin-right: 1rem;
     color: #E2B658;
+  }
+  span {
+    color: rgba(0, 0, 0, 0.55)
+  }
+  @media screen and (max-width: 991px) {
+    justify-content: start;
   }
 }
 
@@ -36,8 +50,8 @@
 .navbar {
   padding-top: 1.1rem !important;
   padding-bottom: 1.1rem !important;
-  padding-left: 5rem !important;
-  padding-right: 2.5rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -62,6 +76,9 @@ nav {
   justify-content: center;
   padding: 5rem;
   font-family: "Brand";
+  .navbar-collapse {
+    width: 100%;
+  }
 }
 
 h1 {

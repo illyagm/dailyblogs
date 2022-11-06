@@ -1,15 +1,15 @@
-import Button from 'react-bootstrap/Button';
+import { Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from '../styles/Header.module.scss';
 // Component import
 import CryptoPrices from './CryptoPrices';
+import WelcomeComponent from '../components/HomeWelcome';
 
 const header = () => {
     return (
-        <div>
+        <Row>
             <Navbar bg="light" expand="lg" className={styles.header}>
                 <Container fluid>
                     <Navbar.Brand href="/" className={styles.title}>CryptoXChange</Navbar.Brand>
@@ -21,18 +21,16 @@ const header = () => {
                             navbarScroll
                         >
                             <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/exchanges">Comprar Criptomonedas</Nav.Link>
+                            <Nav.Link href="/exchanges">Exchanges</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link className='justify-content-end'><CryptoPrices /></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
-
-            </Navbar>
-                
-            
-        </div>
+            </Navbar> 
+            <WelcomeComponent />
+        </Row>
     );
 }
 

@@ -5,7 +5,6 @@
   font-family: "Roboto", sans-serif !important;
   font-weight: 100 !important;
   background-color: #0e0e0e;
-  padding: 1rem 0 1rem 1rem;
   display: flex;
   justify-content: space-around;
   position: sticky;
@@ -16,10 +15,6 @@
   .navigation {
     display: flex;
     justify-content: space-between;
-
-    div {
-      margin: 0 1rem 0 1rem;
-    }
   }
 }
 

@@ -1,7 +1,6 @@
 import styles from '../../styles/Slug.module.scss';
 import { GraphQLClient, gql } from 'graphql-request';
 import Header from '../../components/Header';
-import Link from 'next/link';
 
 const graphcms = new GraphQLClient(
     "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl8fnvnzr3uai01ul8vtu5t4j/master"
