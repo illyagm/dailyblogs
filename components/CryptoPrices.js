@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const cryptoPrices = () => {
+const CryptoPrices = () => {
 
     const [btcPrice, setBtcPrice] = useState(0);
     const [ethPrice, setEthPrice] = useState(0);
@@ -8,8 +8,6 @@ const cryptoPrices = () => {
     const [dogePrice, setDogePrice] = useState(0);
     const [maticPrice, setMaticPrice] = useState(0);
     const [adaPrice, setAdaPrice] = useState(0)
-    const [arrow, setArrow] = useState('up');
-    const [a, setA] = useState(0);
 
 
     const apiCall = {
@@ -86,4 +84,4 @@ const cryptoPrices = () => {
 
 
 
-export default cryptoPrices;
+export default CryptoPrices;
