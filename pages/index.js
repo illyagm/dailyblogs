@@ -4,6 +4,7 @@ import { GraphQLClient, gql } from 'graphql-request';
 import BlogCard from '../components/BlogCard';
 import WelcomeComponent from '../components/HomeWelcome';
 import Header from '../components/Header';
+import CryptoPrices from '../components/CryptoPrices';
 import Container from 'react-bootstrap/Container';
 import { Col, Row } from 'react-bootstrap';
 
@@ -53,7 +54,6 @@ export default function Home({ posts }) {
         <meta name="description" content="Your crypto blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Header />
       <main>
         <WelcomeComponent />
