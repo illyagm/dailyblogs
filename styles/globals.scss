@@ -8,12 +8,52 @@
   color: rgb(50, 50, 50);
 }
 
+.container-fluid {
+  &.home {
+    padding: 0;
+  }
+}
+
+.price-color {
+  &.red {
+    color: red;
+  }
+
+  &.green {
+    color: green;
+  }
+}
+
+
+.crypto-prices {
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  background-color: #F8F9FA !important;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 100;
+  overflow: auto;
+  div {
+    margin-right: 1rem;
+    color: #E2B658;
+  }
+  span {
+    color: rgba(0, 0, 0, 0.55)
+  }
+  @media screen and (max-width: 991px) {
+    justify-content: start;
+  }
+}
+
+
 .navbar {
   padding-top: 1.1rem !important;
   padding-bottom: 1.1rem !important;
-  padding-left: 5rem !important;
-  padding-right: 2.5rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
+
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 0 !important;
@@ -36,6 +76,9 @@ nav {
   justify-content: center;
   padding: 5rem;
   font-family: "Brand";
+  .navbar-collapse {
+    width: 100%;
+  }
 }
 
 h1 {
@@ -70,6 +113,7 @@ ol,
 ul {
   padding-left: 1.5rem;
 }
+
 a {
   font-size: 1.5rem;
   text-decoration: none;
@@ -80,6 +124,7 @@ a {
   body {
     margin: 0% 0%;
   }
+
   nav {
     padding: 3rem 0rem;
   }
@@ -90,6 +135,7 @@ a {
 
 .title {
   line-height: 1.6rem;
+
   &.light {
     font-weight: bold;
   }
