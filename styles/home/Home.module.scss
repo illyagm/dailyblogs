@@ -1,3 +1,5 @@
+@use '../base/vars' as *;
+
 .title h1 {
   color: rgb(39, 39, 39);
   display: flex;
@@ -11,4 +13,10 @@
   margin-top: 1rem;
   margin: 0 25%;
   padding-top: 1rem;
+}
+
+.containerblogs {
+  @media screen and (min-width: $extra-large-screen) {
+    margin-top: -9rem;
+  }
 }

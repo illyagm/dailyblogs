@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import styles from '../styles/header/Cryptoprices.module.scss';
 const CryptoPrices = () => {
 
     const [btcPrice, setBtcPrice] = useState(0);
@@ -71,7 +71,7 @@ const CryptoPrices = () => {
     // map data
 
     return (
-        <div className="crypto-prices">
+        <div className={styles.cryptoprices}>
             <div><span>BTC</span> {parseFloat(btcPrice).toFixed(2)} $</div>
             <div><span>ETH</span> {parseFloat(ethPrice).toFixed(2)} $</div>
             <div><span>DOT</span> {parseFloat(dotPrice).toFixed(2)} $</div>
