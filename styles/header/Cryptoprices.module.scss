@@ -1,0 +1,23 @@
+@use '../base/vars' as *;
+
+.cryptoprices {
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    background-color: $white-main !important;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 100;
+    overflow: auto;
+    div {
+      margin-right: 1rem;
+      color: #E2B658;
+    }
+    span {
+      color: rgba(0, 0, 0, 0.55)
+    }
+    @media screen and (max-width: $desktop-medium) {
+      justify-content: start;
+    }
+  }
+  

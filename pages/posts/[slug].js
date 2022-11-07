@@ -1,4 +1,4 @@
-import styles from '../../styles/Slug.module.scss';
+import styles from '../../styles/slug/Slug.module.scss';
 import { GraphQLClient, gql } from 'graphql-request';
 import Header from '../../components/Header';
 import Head from 'next/head'

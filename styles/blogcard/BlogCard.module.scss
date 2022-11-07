@@ -1,3 +1,5 @@
+@use '../base/vars' as *;
+
 .card {
   margin: 2rem 0.5rem;
   overflow: hidden;
@@ -40,9 +42,19 @@
   }
 
   .text {
-    padding: 1rem 1rem;
+    padding: 1rem;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
+     // text accents
+    .title {
+      line-height: 1.6rem !important;
+      font-weight: 500;
+    }   
+  }
+
+  .datepublished {
+    font-size: 0.75rem !important;
+    color: $accent-gold !important;
   }
 
   .author {
@@ -58,28 +70,6 @@
       height: 5rem;
       border-radius: 50%;
       margin-right: 0.5rem;
-    }
-
-    @media screen and (min-width: 430px) {
-      left: 75%;
-      top: 75%;
-    }
-
-    @media screen and (min-width: 520px) {
-      left: 80%;
-      top: 80%;
-    }
-    @media screen and (min-width: 768px) {
-      left: 72%;
-      top: 70%;
-    }
-    @media screen and (min-width: 992px) {
-      left: 66%;
-      top: 66%;
-    }
-    @media screen and (min-width: 1200px) {
-      left: 75%;
-      top: 75%;
     }
   }
 }

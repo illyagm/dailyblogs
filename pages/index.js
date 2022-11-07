@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/home/Home.module.scss'
 import { GraphQLClient, gql } from 'graphql-request';
 import BlogCard from '../components/BlogCard';
 import Header from '../components/Header';
@@ -55,7 +55,7 @@ export default function Home({ posts }) {
     </Head>
     <Container fluid>
       <Header />
-      <Container className='container-blogs'>
+      <Container className={styles.containerblogs}>
         <Row>
           {posts.map((post) => (
             <Col md={6} lg={4} key={post.id}>

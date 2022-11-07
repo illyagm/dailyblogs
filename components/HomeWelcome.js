@@ -1,6 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 
-import styles from '../styles/WelcomeComponent.module.scss';
+import styles from '../styles/welcomepage/WelcomeComponent.module.scss';
 
 const homeWelcome = () => {
     return (

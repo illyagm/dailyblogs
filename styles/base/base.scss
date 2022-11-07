@@ -1,0 +1,95 @@
+@use 'vars' as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $grey50;
+}
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  line-height: 1.6rem !important;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem 0rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+img {
+  border-radius: 2%;
+}
+
+p, li {
+  line-height: 1.5rem;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+  margin-bottom: 0 !important;
+  
+}
+
+ol, ul {
+  padding-left: 1.5rem;
+}
+
+a {
+  font-size: 1.5rem;
+  text-decoration: none !important;
+  font-weight: 500;
+}
+
+.container-fluid {
+  &.home {
+    padding: 0;
+  }
+}
+
+
+// navbar tweaks
+.navbar {
+  padding: 1.1rem 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  .navbar-collapse {
+    width: 100%;
+  }
+}
+
+
+// media queries for tablets and mobiles
+@media screen and (max-width: $tablet) {
+  body {
+    margin: 0%;
+  }
+
+  nav {
+    padding: 3rem 0rem;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .navbar {
+    padding: 0 !important;
+    padding-top: 1rem !important;
+  }
+}
