@@ -43,7 +43,6 @@ export async function getStaticProps() {
     revalidate: 10,
   }
 }
-Home.title = 'Crypto';
 export default function Home({ posts }) {
   return (
     <>
