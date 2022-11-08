@@ -39,17 +39,16 @@ const ExchangesComponent = ({ exchanges }) => {
   return (
     <>
       <Header />
-      <Container fluid>
+      <Container>
         <Row>
           {exchanges.map((exchange) => (
-            <Col md={6} lg={4} key={exchange.id}>
               <ExchangeCard
+                key={exchange.id}
                 title={exchange.title}
                 coverPhoto={exchange.coverPhoto.url}
                 description={exchange.description}
                 affiliateLink={exchange.affiliateLink}
               />
-            </Col>
           ))}
         </Row>
       </Container>
