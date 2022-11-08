@@ -21,18 +21,3 @@ const ExchangeCard = ({ key, title, coverPhoto, description, affiliateLink }) =>
 
 
 export default ExchangeCard;
-
-/* 
-
- <div className={styles.card}>
-    <div className={styles.imgContainer}>
-        <img src={coverPhoto} alt='' />
-    </div>
-    <div className={styles.text}>
-        <h2 className='title light'>{title}</h2>
-        <div dangerouslySetInnerHTML={{ __html: [description.html] }}></div>
-    </div>
-    <a href={affiliateLink}>Empieza aquí</a>
-</div>
-
-*/
