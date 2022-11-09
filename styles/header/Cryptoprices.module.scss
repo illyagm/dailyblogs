@@ -4,7 +4,7 @@
     white-space: nowrap;
     display: flex;
     justify-content: center;
-    background-color: $white-main !important;
+    background-color: $dark-main !important;
     text-align: center;
     font-size: 0.75rem;
     font-weight: 100;
@@ -14,7 +14,7 @@
       color: #E2B658;
     }
     span {
-      color: rgba(0, 0, 0, 0.55)
+      color: $grey100;
     }
     @media screen and (max-width: $desktop-medium) {
       justify-content: start;
