@@ -47,7 +47,7 @@ export default function Home({ posts }) {
   return (
     <>
     <Head>
-        <title>CryptoXChange - Home</title>
+        <title>Blog Sobre Criptomonedas | Guías y consejos para invertir</title>
         <meta name="description" 
         content="Blog personal con opiniones, guías y consejos sobre el mundo de las Criptomonedas tales como Bitcoin, Ethereum." />
         <link rel="icon" href="/logoCXC.png" />

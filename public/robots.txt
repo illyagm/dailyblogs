@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.cryptoxchange.es/
+
+# Sitemaps
+Sitemap: https://www.cryptoxchange.es/sitemap.xml
