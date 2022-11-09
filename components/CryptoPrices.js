@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const CryptoPrices = () => {
 
@@ -7,39 +7,36 @@ const CryptoPrices = () => {
     const [dotPrice, setDotPrice] = useState(0);
     const [dogePrice, setDogePrice] = useState(0);
     const [maticPrice, setMaticPrice] = useState(0);
-    const [adaPrice, setAdaPrice] = useState(0)
+    const [adaPrice, setAdaPrice] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
 
-
-    const apiCall = {
-        "method": "SUBSCRIBE",
-        "params": [
-            "btcusdt@trade",
-            "ethusdt@trade",
-            "dotusdt@trade",
-            "dogeusdt@trade",
-            "maticusdt@trade",
-            "adausdt@trade"
-        ],
-        "id": 1
-    };
+    // Reference to web socket
+    const binanceWS = useRef(null);
 
     useEffect(() => {
+        binanceWS.current = new WebSocket("wss://stream.binance.com:9443/ws");
+        binanceWS.current.onopen = () => {
+            binanceWS.current.send(JSON.stringify(apiCall));
+        };
+        binanceWS.current.onclose = () => console.log("ws closed");
 
-        const binanceWS = new WebSocket("wss://stream.binance.com:9443/ws");
-
-        binanceWS.onopen = (event) => {
-            binanceWS.send(JSON.stringify(apiCall));
+        const wsCurrent = binanceWS.current;
+        return () => {
+            wsCurrent.close();
         }
+    }, []);
 
-        binanceWS.onmessage = (event) => {
+    useEffect(() => {
+        if (!binanceWS.current) return;
 
-
-            const json = JSON.parse(event.data);
+        binanceWS.current.onmessage = e => {
+            if (isPaused) return;
+            const json = JSON.parse(e.data);
             try {
                 switch (json.s) {
                     case 'BTCUSDT':
                         setBtcPrice(json.p);
-                        //console.log(btcPrice + ' ' + json.p)
+                        console.log(btcPrice + ' ' + json.p)
                         break;
                     case 'ETHUSDT':
                         setEthPrice(json.p);
@@ -62,13 +59,26 @@ const CryptoPrices = () => {
             } catch (error) {
                 console.log(error);
             }
-
         }
-        //clean up function
-        return () => binanceWS.close();
-    }, []);
+    }, [isPaused]);
 
-    // map data
+
+    const apiCall = {
+        "method": "SUBSCRIBE",
+        "params": [
+            "btcusdt@trade",
+            "ethusdt@trade",
+            "dotusdt@trade",
+            "dogeusdt@trade",
+            "maticusdt@trade",
+            "adausdt@trade"
+        ],
+        "id": 1
+    };
+
+    const interval = setInterval(() => {
+        setIsPaused(!isPaused);
+    }, 2000);
 
     return (
         <div className="crypto-prices">
