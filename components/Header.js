@@ -2,17 +2,32 @@ import { Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import styles from '../styles/Header.module.scss';
+import styles from '../styles/header/Header.module.scss';
+import { useRouter } from 'next/router';
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 // Component import
 import CryptoPrices from './CryptoPrices';
 import WelcomeComponent from '../components/HomeWelcome';
 
-const header = () => {
+const Header = () => {
+    const router = useRouter()
     return (
-        <Row>
-            <Navbar bg="light" expand="lg" className={styles.header}>
-                <Container fluid>
-                    <Navbar.Brand href="/" className={styles.title}>CryptoXChange</Navbar.Brand>
+        <Row className={router.pathname == '/' ? '' : 'g-0'}>
+            <Navbar bg="dark" variant="dark" expand="lg" className={styles.header}>
+                <Container>
+                    <Navbar.Brand href="/" className={styles.title}>
+                        Crypt
+                        <CurrencyBitcoinIcon 
+                        sx={{ 
+                            backgroundColor: '#E2B658',
+                            fill: '#202528',
+                            borderRadius: '50%',
+                            fontSize: '15px !important',
+                            margin: '0.1rem 0.1rem'
+
+                        }}/>
+                        XChange
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -20,36 +35,18 @@ const header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/exchanges">Exchanges</Nav.Link>
+                            <Nav.Link className={ router.pathname == '/' ? 'active' : ''} href="/">Home</Nav.Link>
+                            <Nav.Link className={ router.pathname == '/exchanges' ? 'active' : ''} href="/exchanges">Exchanges</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link className='justify-content-end'><CryptoPrices /></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
-            </Navbar> 
-            <WelcomeComponent />
+            </Navbar>
+            {router.pathname == '/' ? <WelcomeComponent /> : ''}
         </Row>
     );
 }
 
-
-/* 
-
-DROPDOWNS
-
-<NavDropdown title="Dropdown" id="basic-nav-dropdown">
-    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-    <NavDropdown.Item href="#action/3.2">
-        Another action
-    </NavDropdown.Item>
-    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-    <NavDropdown.Divider />
-    <NavDropdown.Item href="#action/3.4">
-        Separated link
-    </NavDropdown.Item>
-</NavDropdown>
-
-*/
-export default header;
+export default Header;

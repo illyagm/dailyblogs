@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/home/Home.module.scss'
 import { GraphQLClient, gql } from 'graphql-request';
 import BlogCard from '../components/BlogCard';
 import Header from '../components/Header';
 import Container from 'react-bootstrap/Container';
 import { Col, Row } from 'react-bootstrap';
+import Head from 'next/head'
 
 
 const graphcms = new GraphQLClient(
@@ -43,17 +43,18 @@ export async function getStaticProps() {
     revalidate: 10,
   }
 }
-
 export default function Home({ posts }) {
   return (
+    <>
+    <Head>
+        <title>Blog Sobre Criptomonedas | Guías y consejos para invertir</title>
+        <meta name="description" 
+        content="Blog personal con opiniones, guías y consejos sobre el mundo de las Criptomonedas tales como Bitcoin, Ethereum." />
+        <link rel="icon" href="/logoCXC.png" />
+    </Head>
     <Container fluid>
-      <Head>
-        <title>CryptoXChange</title>
-        <meta name="description" content="Your crypto blog" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Header />
-      <Container className='container-blogs'>
+      <Container className={styles.containerblogs}>
         <Row>
           {posts.map((post) => (
             <Col md={6} lg={4} key={post.id}>
@@ -71,5 +72,6 @@ export default function Home({ posts }) {
 
       </footer>
     </Container>
+    </>
   )
 }

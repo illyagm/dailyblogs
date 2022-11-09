@@ -1,3 +1,5 @@
+@use '../base/vars' as *;
+
 .blog {
   margin: 2.5% 10%;
   line-height: 1.6rem !important;
@@ -5,7 +7,7 @@
   ul {
     li {
       padding: 0.25rem;
-      color: #E2B658;
+      color: $accent-gold;
     }
   }
 
@@ -13,27 +15,23 @@
     width: 100%;
 
     tbody {
-      border-bottom: 1px #E2B658 solid;
+      border-bottom: 1px $accent-gold solid;
 
       tr:first-child {
         padding-top: 0.15rem;
-        border-bottom: 1px #E2B658 solid;
+        border-bottom: 1px $accent-gold solid;
       }
     }
   }
 
   a {
-    color: #E2B658 !important;
+    color: $accent-gold !important;
     font-size: unset !important;
   }
 
   h3 {
     margin: 2rem 0;
   }
-}
-
-.text {
-  margin: 2.5% 25%;
 }
 
 .navback {
@@ -96,16 +94,20 @@
   text-align: center;
 }
 
-@media screen and (max-width: 992px) {
+.text {
+  margin: 2.5% 18%;
+}
+
+@media screen and (max-width: $desktop-medium) {
   .blog {
-    margin: 2.5% 12%;
+    margin: 2.5% 0%;
   }
   .text {
     margin: 2.5% 6%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $tablet) {
   .blog {
     margin: 0rem 2rem;
   }
