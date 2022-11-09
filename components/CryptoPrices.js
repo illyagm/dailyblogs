@@ -36,7 +36,6 @@ const CryptoPrices = () => {
                 switch (json.s) {
                     case 'BTCUSDT':
                         setBtcPrice(json.p);
-                        console.log(btcPrice + ' ' + json.p)
                         break;
                     case 'ETHUSDT':
                         setEthPrice(json.p);
