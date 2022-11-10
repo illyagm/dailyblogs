@@ -66,7 +66,7 @@ export async function getStaticProps({ params }) {
     }
 }
 
-const article = ({ post }) => {
+const Article = ({ post }) => {
 
     article.title = post.title;
     useEffect(() => {
@@ -132,4 +132,4 @@ const article = ({ post }) => {
     );
 }
 
-export default article;
+export default Article;
