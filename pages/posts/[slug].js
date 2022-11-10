@@ -66,11 +66,13 @@ export async function getStaticProps({ params }) {
     }
 }
 
-const Article = ({ post }) => {
 
-    useEffect(() => {
+
+const Article = ({ post }) => {
+    let postId = post.id
+
+    async function updatePost() {
         let pageViewsCount = post.pageViews + 1;
-        let postId = post.id
         const QUERY = gql`
             mutation udatePost($postId: ID!, $pageViewsCount: Int){
                 updatePost(
@@ -85,15 +87,23 @@ const Article = ({ post }) => {
                 } 
             }
             `;
+        await graphcms.request(QUERY, { postId, pageViewsCount });
+
+    }
+
+    async function publishPost() {
         const QUERY2 = gql`
-            mutation publishPost($postId: ID!) {
-                publishPost(to: PUBLISHED, where: {id: $postId}) {
-                id
+        mutation publishPost($postId: ID!) {
+            publishPost(to: PUBLISHED, where: {id: $postId}) {
+            id
                 }
             }
         `;
-        graphcms.request(QUERY, { postId, pageViewsCount });
-        graphcms.request(QUERY2, { postId });
+        await graphcms.request(QUERY2, { postId });
+    }
+    useEffect(() => {
+        updatePost();
+        publishPost();
     }, [])
     return (
         <>
