@@ -17,6 +17,7 @@ const CryptoPrices = () => {
         binanceWS.current = new WebSocket("wss://stream.binance.com:9443/ws");
         binanceWS.current.onopen = () => {
             binanceWS.current.send(JSON.stringify(apiCall));
+            console.log("ws opened")
         };
         binanceWS.current.onclose = () => console.log("ws closed");
 

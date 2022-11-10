@@ -2,10 +2,13 @@ import styles from '../../styles/slug/Slug.module.scss';
 import { GraphQLClient, gql } from 'graphql-request';
 import Header from '../../components/Header';
 import Head from 'next/head'
+import { useEffect } from 'react';
 
-const graphcms = new GraphQLClient(
-    "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl8fnvnzr3uai01ul8vtu5t4j/master"
-);
+const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL, {
+    headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_PROD_TOKEN_POSTS}`,
+    }
+});
 
 const QUERY = gql`
 query Post($slug: String!) {
@@ -28,7 +31,8 @@ query Post($slug: String!) {
             id,
             url
         }
-        seoDescription
+        seoDescription,
+        pageViews
     }
 }
 `;
@@ -40,6 +44,7 @@ const SLUGLIST = gql`
         }
     }
 `;
+
 
 export async function getStaticPaths() {
     const { posts } = await graphcms.request(SLUGLIST);
@@ -62,7 +67,35 @@ export async function getStaticProps({ params }) {
 }
 
 const article = ({ post }) => {
+
     article.title = post.title;
+    useEffect(() => {
+        let pageViewsCount = post.pageViews + 1;
+        let postId = post.id
+        const QUERY = gql`
+            mutation udatePost($postId: ID!, $pageViewsCount: Int){
+                updatePost(
+                    where: { 
+                        id: $postId
+                    }
+                    data: { 
+                        pageViews: $pageViewsCount 
+                    }
+                ) {
+                id
+                } 
+            }
+            `;
+        const QUERY2 = gql`
+            mutation publishPost($postId: ID!) {
+                publishPost(to: PUBLISHED, where: {id: $postId}) {
+                id
+                }
+            }
+        `;
+        graphcms.request(QUERY, { postId, pageViewsCount });
+        graphcms.request(QUERY2, { postId });
+    }, [])
     return (
         <>
             <Head>
