@@ -7,9 +7,7 @@ import { Col, Row } from 'react-bootstrap';
 import Head from 'next/head'
 
 
-const graphcms = new GraphQLClient(
-  "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl8fnvnzr3uai01ul8vtu5t4j/master"
-);
+const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL);
 
 const QUERY = gql`
   {
@@ -30,6 +28,8 @@ const QUERY = gql`
       coverPhoto{
           url
       }
+      seoDescription
+      pageViews
     }
   }
 `;
@@ -55,16 +55,18 @@ export default function Home({ posts }) {
     <Container fluid>
       <Header />
       <Container className={styles.containerblogs}>
-        <Row>
+        <Row className='justify-content-center'>
           {posts.map((post) => (
-            <Col md={6} lg={4} key={post.id}>
+            <Col sm={8} md={6} lg={4} key={post.id}>
               <BlogCard
                 title={post.title}
                 author={post.author}
                 coverPhoto={post.coverPhoto}
-                datePublished={post.datePublished}
-                slug={post.slug} />
-            </Col>
+                slug={post.slug}
+                pageViews={post.pageViews}
+                content={post.seoDescription}
+                />
+                </Col>
           ))}
         </Row>
       </Container>
