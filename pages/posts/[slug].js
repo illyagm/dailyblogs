@@ -68,7 +68,6 @@ export async function getStaticProps({ params }) {
 
 const Article = ({ post }) => {
 
-    article.title = post.title;
     useEffect(() => {
         let pageViewsCount = post.pageViews + 1;
         let postId = post.id
