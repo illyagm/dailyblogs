@@ -98,11 +98,11 @@ const Article = ({ post }) => {
         await graphcms.request(QUERY2, { postId });
 
     }
-    useEffect(() => {
-        setTimeout(() => {
-            updatePost();
-        }, 2500);
-    }, [])
+
+    setTimeout(() => {
+        updatePost();
+    }, 2500);
+
     return (
         <>
             <Head>
