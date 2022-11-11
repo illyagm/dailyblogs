@@ -1,4 +1,4 @@
-import { Row } from 'react-bootstrap';
+import { Button, Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -17,15 +17,15 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand href="/" className={styles.title}>
                         Crypt
-                        <CurrencyBitcoinIcon 
-                        sx={{ 
-                            backgroundColor: '#E2B658',
-                            fill: '#202528',
-                            borderRadius: '50%',
-                            fontSize: '15px !important',
-                            margin: '0.1rem 0.1rem'
+                        <CurrencyBitcoinIcon
+                            sx={{
+                                backgroundColor: '#E2B658',
+                                fill: '#202528',
+                                borderRadius: '50%',
+                                fontSize: '15px !important',
+                                margin: '0.1rem 0.1rem'
 
-                        }}/>
+                            }} />
                         XChange
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
@@ -35,12 +35,15 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link className={ router.pathname == '/' ? 'active' : ''} href="/">Home</Nav.Link>
-                            <Nav.Link className={ router.pathname == '/exchanges' ? 'active' : ''} href="/exchanges">Exchanges</Nav.Link>
+                            <Nav.Link className={router.pathname == '/' ? 'active' : ''} href="/">Home</Nav.Link>
+                            <Nav.Link className={router.pathname == '/exchanges' ? 'active' : ''} href="/exchanges">Exchanges</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link className='justify-content-end'><CryptoPrices /></Nav.Link>
                         </Nav>
+                        <Nav className={styles.buttonExchange}><Button href="https://shorturl.at/afmq2" target="_blank" variant='secondary'>
+                            ¡100$ de bono en 1era inversión!
+                        </Button></Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
