@@ -41,7 +41,7 @@ const Header = () => {
                         <Nav>
                             <Nav.Link className='justify-content-end'><CryptoPrices /></Nav.Link>
                         </Nav>
-                        <Nav className={styles.buttonExchange}><Button href="https://shorturl.at/afmq2" target="_blank" variant='secondary'>
+                        <Nav className={styles.buttonExchange}><Button href="https://www.binance.com/en/activity/referral-entry/CPA?fromActivityPage=true&ref=CPA_00ELJGV9UV" target="_blank" variant='secondary'>
                             ¡100$ de bono en 1era inversión!
                         </Button></Nav>
                     </Navbar.Collapse>
