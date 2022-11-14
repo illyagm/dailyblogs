@@ -1,0 +1,11 @@
+@use '../base/vars' as *;
+
+
+.buttonSticky {
+    position: sticky;
+    left: 90%;
+    bottom: 2%;
+    margin-right: 2rem;
+    text-align: center;
+    width: 8%;
+  }
