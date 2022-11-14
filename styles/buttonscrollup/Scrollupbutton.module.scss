@@ -8,4 +8,8 @@
     margin-right: 2rem;
     text-align: center;
     width: 8%;
+    @media screen and (max-width: $tablet) {
+        bottom: 4%;
+        margin-right: 3rem;
+    }
   }
