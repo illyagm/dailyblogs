@@ -36,8 +36,10 @@ export default function ScrollToTop() {
             <div onClick={scrollToTop}>
             <KeyboardArrowUpIcon 
             sx={{ 
-                fill: '#E2B658',
-                fontSize: '4rem !important',
+                fill: 'white',
+                backgroundColor: 'black',
+                borderRadius: '50%',
+                fontSize: '3rem !important',
             }} />
             </div>
         )}
