@@ -2,7 +2,7 @@ import styles from '../../styles/slug/Slug.module.scss';
 import { GraphQLClient, gql } from 'graphql-request';
 import Header from '../../components/Header';
 import Head from 'next/head'
-import { useEffect } from 'react';
+import ScrollToTop from '../../components/ScrollUpButton';
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL, {
     headers: {
@@ -134,6 +134,7 @@ const Article = ({ post }) => {
                         </div>
                     </div>
                 </main>
+                <ScrollToTop />
             </div>
         </>
     );

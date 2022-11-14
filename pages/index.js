@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Container from 'react-bootstrap/Container';
 import { Col, Row } from 'react-bootstrap';
 import Head from 'next/head'
+import ScrollToTop from '../components/ScrollUpButton';
 
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL);
@@ -74,6 +75,7 @@ export default function Home({ posts }) {
 
       </footer>
     </Container>
+    <ScrollToTop />
     </>
   )
 }
