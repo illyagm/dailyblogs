@@ -71,6 +71,7 @@ export default function Home({ posts }) {
           ))}
         </Row>
       </Container>
+      <a href="https://shop.ledger.com/pages/ledger-nano-s-plus/?r=a77d8a211939"><img width="928" height="90" src="http://affiliate.ledger.com/image/928/90/Spanish" /></a>
       <footer className={styles.footer}>
 
       </footer>
