@@ -3,6 +3,9 @@ import { GraphQLClient, gql } from 'graphql-request';
 import Header from '../../components/Header';
 import Head from 'next/head'
 import ScrollToTop from '../../components/ScrollUpButton';
+import { Row, Col } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import LedgerAffiliate from '../../components/LedgerAffiliate';
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL, {
     headers: {
@@ -114,25 +117,37 @@ const Article = ({ post }) => {
             <div>
                 <Header />
                 <main className={styles.blog}>
-                    <h3 className={styles.posttitle}>{post.title}</h3>
-                    <div className={styles.text}>
-                        <img src={post.coverPhoto.url} className={styles.cover} alt='' />
-                        <div className={styles.title}>
-                            <div className={styles.authdetails}>
-                                <img src={post.author.avatar.url} alt='' />
-                                <div className={styles.authtext}>
-                                    <h6>
-                                        By {post.author.name}
-                                    </h6>
-                                    <h6 className={styles.date}>
-                                        {post.datePublished}
-                                    </h6>
+                    <Row>
+                        <Col md="9">
+                            <div className={styles.text}>
+                                <h3 className={styles.posttitle}>{post.title}</h3>
+                                <img src={post.coverPhoto.url} className={styles.cover} alt='' />
+                                <div className={styles.title}>
+                                    <div className={styles.authdetails}>
+                                        <img src={post.author.avatar.url} alt='' />
+                                        <div className={styles.authtext}>
+                                            <h6>
+                                                By {post.author.name}
+                                            </h6>
+                                            <h6 className={styles.date}>
+                                                {post.datePublished}
+                                            </h6>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div className={styles.content} dangerouslySetInnerHTML={{ __html: [post.content.html] }}>
+                                </div>
+                                <LedgerAffiliate isArticle={true}/>
                             </div>
-                        </div>
-                        <div className={styles.content} dangerouslySetInnerHTML={{ __html: [post.content.html] }}>
-                        </div>
-                    </div>
+
+                        </Col>
+                        {/* Banner for desktop and tablet */}
+                        <Col className="ledgerComponentSlug justify-content-start">
+                            <a href="https://shop.ledger.com/pages/ledger-nano-s-plus/?r=a77d8a211939" target="_blank" rel="noopener noreferrer">
+                                <img width="160" height="600" src="http://affiliate.ledger.com/image/160/600/Spanish" />
+                            </a>
+                        </Col>
+                    </Row>
                 </main>
                 <ScrollToTop />
             </div>

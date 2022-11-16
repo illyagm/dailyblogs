@@ -77,6 +77,54 @@ nav {
 }
 
 
+.home-ledger-container {
+  bottom: 0;
+  position: sticky;
+  padding-bottom: 0.5rem;
+}
+
+.ledgerComponentSlug {
+  display: none;
+  a {
+    padding-top: 11rem !important;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.ledgerComponent {
+  display: none;
+  a {
+    padding-top: 11rem !important;
+  }
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.ledgerComponentMobile {
+  display: none;
+  @media screen and (min-width:  $desktop-medium) {
+    display: block;
+  }
+}
+
+.ledgerComponentMobileXS {
+  display: none;
+  @media screen and (min-width: 401px) and (max-width: $tablet) {
+    display: block;
+  }
+}
+
+.ledgerComponentMobileXXS {
+  display: none;
+  @media screen and (max-width:400px) {
+    display: block;
+  }
+}
+
+
 // media queries for tablets and mobiles
 @media screen and (max-width: $tablet) {
   body {
