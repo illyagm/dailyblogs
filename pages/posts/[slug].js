@@ -4,6 +4,8 @@ import Header from '../../components/Header';
 import Head from 'next/head'
 import ScrollToTop from '../../components/ScrollUpButton';
 import { Row, Col } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import LedgerAffiliate from '../../components/LedgerAffiliate';
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL, {
     headers: {
@@ -115,10 +117,10 @@ const Article = ({ post }) => {
             <div>
                 <Header />
                 <main className={styles.blog}>
-                    <Row g-0>
+                    <Row>
                         <Col md="9">
                             <div className={styles.text}>
-                            <h3 className={styles.posttitle}>{post.title}</h3>
+                                <h3 className={styles.posttitle}>{post.title}</h3>
                                 <img src={post.coverPhoto.url} className={styles.cover} alt='' />
                                 <div className={styles.title}>
                                     <div className={styles.authdetails}>
@@ -135,11 +137,13 @@ const Article = ({ post }) => {
                                 </div>
                                 <div className={styles.content} dangerouslySetInnerHTML={{ __html: [post.content.html] }}>
                                 </div>
+                                <LedgerAffiliate isArticle={true}/>
                             </div>
 
                         </Col>
-                        <Col className={styles.ledgerComponent + ' d-flex justify-content-end'}>
-                            <a href="https://shop.ledger.com/pages/ledger-nano-s-plus/?r=a77d8a211939">
+                        {/* Banner for desktop and tablet */}
+                        <Col className="ledgerComponentSlug justify-content-start">
+                            <a href="https://shop.ledger.com/pages/ledger-nano-s-plus/?r=a77d8a211939" target="_blank">
                                 <img width="160" height="600" src="http://affiliate.ledger.com/image/160/600/Spanish" />
                             </a>
                         </Col>
