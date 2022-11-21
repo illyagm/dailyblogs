@@ -144,7 +144,7 @@ const Article = ({ post }) => {
                         {/* Banner for desktop and tablet */}
                         <Col className="ledgerComponentSlug justify-content-start">
                             <a href="https://shop.ledger.com/pages/ledger-nano-s-plus/?r=a77d8a211939" target="_blank" rel="noopener noreferrer">
-                                <img width="160" height="600" src="http://affiliate.ledger.com/image/160/600/Spanish" />
+                                <img width="160" height="600" src="https://affiliate.ledger.com/image/160/600/Spanish" />
                             </a>
                         </Col>
                     </Row>
