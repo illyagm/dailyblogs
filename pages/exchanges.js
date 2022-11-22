@@ -41,7 +41,7 @@ const ExchangesComponent = ({ exchanges }) => {
       <Header />
       <Container>
         <h1 className='mt-4'>Nuestros exchanges de Criptomonedas</h1>
-        <p>Llevate hasta 100 euros de bono en tu primera compra</p>
+        <p>Llévate hasta 100 euros de bono en tu primera compra</p>
         <Row>
           {exchanges.map((exchange) => (
               <ExchangeCard
