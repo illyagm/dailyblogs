@@ -11,7 +11,7 @@ const homeWelcome = () => {
             <Row className={styles.welcomemain + ' g-0'}>
 
                 <Col md={{ span: 6, offset: 3 }} className={styles.welcometext}>
-                    <h3>Bienvenido a <span className={styles.accenttext}>CryptoXChange</span></h3>
+                    <h1>Bienvenido a <span className={styles.accenttext}>CryptoXChange</span></h1>
                     <span>Blog personal con opiniones, guías y consejos sobre el mundo de las Criptomonedas</span>
                 </Col>
             </Row>

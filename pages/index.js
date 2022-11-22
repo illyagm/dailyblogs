@@ -30,7 +30,8 @@ const QUERY = gql`
           url
       }
       seoDescription
-      pageViews
+      pageViews,
+      altDescriptionImg
     }
   }
 `;
@@ -66,6 +67,7 @@ export default function Home({ posts }) {
                   slug={post.slug}
                   pageViews={post.pageViews}
                   content={post.seoDescription}
+                  altDescriptionImg={post.altDescriptionImg}
                 />
               </Col>
             ))}

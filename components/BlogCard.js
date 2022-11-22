@@ -3,12 +3,12 @@ import { Col, Container, Row } from 'react-bootstrap';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import styles from '../styles/blogcard/BlogCard.module.scss';
 
-const blogPost = ({ title, content, coverPhoto, pageViews, slug }) => {
+const blogPost = ({ title, content, coverPhoto, pageViews, slug, altDescriptionImg }) => {
     return (
         <Container className={styles.card + ' g-0'}>
             <Link href={'/posts/' + slug}>
                 <div className={styles.imgContainer}>
-                    <img src={coverPhoto.url} alt='' />
+                    <img src={coverPhoto.url} alt={altDescriptionImg} />
                 </div>
             </Link>
             <Link href={'/posts/' + slug}>
