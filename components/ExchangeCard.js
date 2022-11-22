@@ -20,7 +20,7 @@ const ExchangeCard = ({ key, title, coverPhoto, description, affiliateLink }) =>
                         <div className="color">
                             <div className="description" dangerouslySetInnerHTML={{ __html: [description.html.substring(0, 150)] }}></div>
                         </div>
-                        <Button href={affiliateLink} variant="outline-secondary">Empieza aquí</Button>
+                        <Button href={affiliateLink} variant="outline-secondary" className='accessButton'>Empieza aquí</Button>
                     </div>
                 </div>
             </Col>
