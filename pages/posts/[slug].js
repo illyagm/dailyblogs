@@ -4,7 +4,6 @@ import Header from '../../components/Header';
 import Head from 'next/head'
 import ScrollToTop from '../../components/ScrollUpButton';
 import { Row, Col } from 'react-bootstrap';
-import Container from 'react-bootstrap/Container';
 import LedgerAffiliate from '../../components/LedgerAffiliate';
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL, {
@@ -120,18 +119,18 @@ const Article = ({ post }) => {
                     <Row>
                         <Col md="9">
                             <div className={styles.text}>
-                                <h3 className={styles.posttitle}>{post.title}</h3>
-                                <img src={post.coverPhoto.url} className={styles.cover} alt='' />
+                                <h1 className={styles.posttitle}>{post.title}</h1>
                                 <div className={styles.title}>
+                                    <hr />
                                     <div className={styles.authdetails}>
                                         <img src={post.author.avatar.url} alt='' />
                                         <div className={styles.authtext}>
-                                            <h6>
+                                            <span>
                                                 By {post.author.name}
-                                            </h6>
-                                            <h6 className={styles.date}>
+                                            </span>
+                                            <span className={styles.date}>
                                                 {post.datePublished}
-                                            </h6>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
