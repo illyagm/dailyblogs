@@ -22,9 +22,10 @@ const CryptoPrices = () => {
         binanceWS.current.onclose = () => console.log("ws closed");
 
         const wsCurrent = binanceWS.current;
-        return () => {
+        setTimeout(() => {
+            console.log('web socket closed')
             wsCurrent.close();
-        }
+        }, 25000);
     }, []);
 
     useEffect(() => {
