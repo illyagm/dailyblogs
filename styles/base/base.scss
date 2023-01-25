@@ -146,3 +146,11 @@ nav {
     padding-top: 1rem !important;
   }
 }
+
+.dropdown-menu {
+  background-color: rgb(33, 37, 41) !important;
+  .dropdown-item {
+    color: rgba(255, 255, 255, 0.5490196078);
+    font-size: medium;
+  }  
+}
