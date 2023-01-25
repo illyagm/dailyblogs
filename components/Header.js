@@ -1,6 +1,7 @@
 import { Button, Row } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from '../styles/header/Header.module.scss';
 import { useRouter } from 'next/router';
@@ -36,7 +37,10 @@ const Header = () => {
                             navbarScroll
                         >
                             <Nav.Link className={router.pathname == '/' ? 'active' : ''} href="/">Inicio</Nav.Link>
-                            <Nav.Link className={router.pathname == '/exchanges' ? 'active' : ''} href="/exchanges">Plataformas</Nav.Link>
+                            <NavDropdown title="Cómo Invertir " id="nav-dropdown">
+                                <NavDropdown.Item href="/exchanges" className={router.pathname == '/exchanges' ? 'active' : ''}>Plataformas Trading</NavDropdown.Item>
+                                <NavDropdown.Item eventKey="2" href="/calculadora" className={router.pathname == '/calculadora' ? 'active' : ''}>Calculadora Staking</NavDropdown.Item>
+                            </NavDropdown>
                         </Nav>
                         <Nav>
                             <Nav.Link className='justify-content-end'><CryptoPrices /></Nav.Link>
