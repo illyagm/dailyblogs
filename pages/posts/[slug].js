@@ -5,7 +5,6 @@ import Head from 'next/head'
 import ScrollToTop from '../../components/ScrollUpButton';
 import { Row, Col } from 'react-bootstrap';
 import LedgerAffiliate from '../../components/LedgerAffiliate';
-import StakingCalculator from '../../components/IncomeCalculator';
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL, {
     headers: {
