@@ -5,6 +5,7 @@ import Head from 'next/head'
 import ScrollToTop from '../../components/ScrollUpButton';
 import { Row, Col } from 'react-bootstrap';
 import LedgerAffiliate from '../../components/LedgerAffiliate';
+import SocialShare from '../../components/SocialShare';
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL, {
     headers: {
@@ -121,6 +122,7 @@ const Article = ({ post }) => {
                             <div className={styles.text}>
                                 <h1 className={styles.posttitle}>{post.title}</h1>
                                 <div className={styles.title}>
+                                    <SocialShare articleLink={post.slug} articleTitle={post.title} />
                                     <hr />
                                     <div className={styles.authdetails}>
                                         <img src={post.author.avatar.url} alt='' />
@@ -136,7 +138,7 @@ const Article = ({ post }) => {
                                 </div>
                                 <div className={styles.content} dangerouslySetInnerHTML={{ __html: [post.content.html] }}>
                                 </div>
-                                <LedgerAffiliate isArticle={true}/>
+                                <LedgerAffiliate isArticle={true} />
                             </div>
 
                         </Col>
@@ -147,7 +149,7 @@ const Article = ({ post }) => {
                             </a>
                         </Col>
                     </Row>
-                <ScrollToTop />
+                    <ScrollToTop />
                 </main>
             </div>
         </>
