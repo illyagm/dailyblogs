@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Row, Col } from 'react-bootstrap';
 
 
@@ -78,6 +79,7 @@ const IncomeCalculator = () => {
                     </Col>
                 </Row>
             </Container>
+            <Footer />
         </>
     )
 }

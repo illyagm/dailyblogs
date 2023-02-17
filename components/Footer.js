@@ -1,26 +1,27 @@
-import { Container, Nav } from "react-bootstrap"
-
+import { Container, Nav, Row, Col } from "react-bootstrap"
+import styles from "../styles/footer/Footer.module.scss";
 const Footer = () => {
     return (
         <>
-            <Container>
-                <Nav className="justify-content-center" activeKey="/home">
-                    <Nav.Item>
-                        <Nav.Link href="/home">Active</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="link-1">Link</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="link-2">Link</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="disabled" disabled>
-                            Disabled
-                        </Nav.Link>
-                    </Nav.Item>
-                </Nav>
-            </Container>
+            <div className={styles.footer + ' justify-content-md-center'}>
+                <Row>
+                    <Col md={4} sm={4} activeKey="/home">
+                        <Nav.Item>
+                            <Nav.Link href="/home">Aviso Legal</Nav.Link>
+                        </Nav.Item>
+                    </Col>
+                    <Col md={4} sm={4}>
+                        <Nav.Item>
+                            <Nav.Link eventKey="link-1">Política de Privacidad</Nav.Link>
+                        </Nav.Item>
+                    </Col>
+                    <Col md={4} sm={4}>
+                        <Nav.Item>
+                            <Nav.Link eventKey="link-2">Contacto</Nav.Link>
+                        </Nav.Item>
+                    </Col>
+                </Row>
+            </div>
         </>
     )
 }

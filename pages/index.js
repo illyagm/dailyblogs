@@ -74,10 +74,10 @@ export default function Home({ posts }) {
             ))}
           </Row>
         </Container>
-        <LedgerAffiliate isArticle={false}/>
-        <Footer />
+        <LedgerAffiliate isArticle={false} />
       </Container>
       <ScrollToTop />
+      <Footer />
     </>
   )
 }
