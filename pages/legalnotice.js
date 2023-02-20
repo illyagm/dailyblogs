@@ -22,7 +22,7 @@ const LegalNotice = () => {
                 <h2>Derechos de propiedad intelectual</h2>
                 <p>Todo el contenido de este sitio web, incluyendo texto, imágenes, diseño, logotipos, iconos, fotografías, clips de audio y video, software y otros materiales que se encuentran en el sitio web, están protegidos por derechos de propiedad intelectual. No puede copiar, distribuir, mostrar públicamente o utilizar cualquier material de este sitio web sin nuestro permiso previo por escrito.</p>
                 <h2>Limitación de responsabilidad</h2>
-                <p>Este sitio web se proporciona "tal cual" y no hacemos ninguna garantía o representación sobre su contenido, calidad, rendimiento o precisión. No seremos responsables por cualquier daño, incluyendo daños indirectos, incidentales, especiales o consecuentes, que resulten del uso o la imposibilidad de usar este sitio web.</p>
+                <p>Este sitio web se proporciona -tal cual- y no hacemos ninguna garantía o representación sobre su contenido, calidad, rendimiento o precisión. No seremos responsables por cualquier daño, incluyendo daños indirectos, incidentales, especiales o consecuentes, que resulten del uso o la imposibilidad de usar este sitio web.</p>
                 <h2>Modificaciones</h2>
                 <p>Nos reservamos el derecho de actualizar o modificar estas condiciones en cualquier momento sin previo aviso. Por favor, consulte esta página regularmente para estar informado de cualquier cambio en estas condiciones.</p>
                 <h2>Contacto</h2>
