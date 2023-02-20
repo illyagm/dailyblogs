@@ -48,7 +48,7 @@ const ExchangesComponent = ({ exchanges }) => {
         <link rel="icon" href="/logoCXC.png" />
       </Head>
       <Header />
-      <Container style={{'height': '100%'}}>
+      <Container style={{'height': '100vh'}}>
         <h1 className='mt-4'>Nuestros exchanges de Criptomonedas</h1>
         <p>Llévate hasta 100 euros de bono en tu primera compra</p>
         <Row>

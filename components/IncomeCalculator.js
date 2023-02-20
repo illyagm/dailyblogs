@@ -43,7 +43,7 @@ const IncomeCalculator = () => {
     return (
         <>
             <Header />
-            <Container fluid style={{ 'height': '100%' }}>
+            <Container fluid style={{ 'height': '100vh' }}>
                 <Row className='d-flex align-items-center'>
                     <Col md={{ span: 6, offset: 3 }} className="mt-4">
                         <h3>Calculadora de Staking</h3>
