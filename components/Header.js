@@ -17,17 +17,7 @@ const Header = () => {
             <Navbar bg="dark" variant="dark" expand="lg" className={styles.header}>
                 <Container>
                     <Navbar.Brand href="/" className={styles.title}>
-                        Crypto
-                        {/* <CurrencyBitcoinIcon
-                            sx={{
-                                backgroundColor: '#E2B658',
-                                fill: '#202528',
-                                borderRadius: '50%',
-                                fontSize: '15px !important',
-                                margin: '0.1rem 0.1rem'
-
-                            }} /> */}
-                        XChange
+                        CryptoXChange
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">

@@ -1,0 +1,22 @@
+@use '../base/vars' as *;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+.footer {
+    background-color: rgb(33, 37, 41) !important;
+    padding: 1.8rem;
+    color: #fff !important;
+    text-align: center;
+
+    a {
+        color: rgba(255, 255, 255, 0.5490196078);
+    }
+}
+
+.privacypolicy, .legalnotice, .contactpage {
+    padding: 2.5% 10%;
+    a {
+        font-size: 1rem !important;
+        color: $accent-gold;
+    }
+}

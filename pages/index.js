@@ -2,6 +2,7 @@ import styles from '../styles/home/Home.module.scss'
 import { GraphQLClient, gql } from 'graphql-request';
 import BlogCard from '../components/BlogCard';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Container from 'react-bootstrap/Container';
 import { Col, Row } from 'react-bootstrap';
 import Head from 'next/head'
@@ -73,11 +74,10 @@ export default function Home({ posts }) {
             ))}
           </Row>
         </Container>
-        <LedgerAffiliate isArticle={false}/>
-        <footer className={styles.footer}>
-        </footer>
+        <LedgerAffiliate isArticle={false} />
       </Container>
       <ScrollToTop />
+      <Footer />
     </>
   )
 }
