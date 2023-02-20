@@ -3,6 +3,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ExchangeCard from '../components/ExchangeCard';
+import Head from 'next/head';
+
 const graphcms = new GraphQLClient(
   "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl8fnvnzr3uai01ul8vtu5t4j/master"
 );
@@ -39,6 +41,12 @@ export async function getStaticProps() {
 const ExchangesComponent = ({ exchanges }) => {
   return (
     <>
+      <Head>
+        <title>Blog Sobre Criptomonedas | Nustros exchanges recomendados para invertir</title>
+        <meta name="description"
+          content="Nuestros exchanges de criptomonedas recomendadas para invertir. Binance y Coinbase." />
+        <link rel="icon" href="/logoCXC.png" />
+      </Head>
       <Header />
       <Container style={{'height': '100%'}}>
         <h1 className='mt-4'>Nuestros exchanges de Criptomonedas</h1>

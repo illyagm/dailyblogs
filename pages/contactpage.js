@@ -1,9 +1,17 @@
 import { Container } from "react-bootstrap";
 import styles from "../styles/footer/Footer.module.scss";
 import Header from "../components/Header";
+import Head from 'next/head'
+
 const ContactPage = () => {
     return (
         <>
+            <Head>
+                <title>Blog Sobre Criptomonedas | Página de contacto</title>
+                <meta name="description"
+                    content="¿Tienes alguna duda? ¡Utiliza esta página de contacto!" />
+                <link rel="icon" href="/logoCXC.png" />
+            </Head>
             <Header />
             <Container className={styles.contactpage}>
                 <h1>Contacto</h1>

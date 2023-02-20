@@ -1,10 +1,17 @@
 import { Container } from "react-bootstrap"
 import styles from '../styles/footer/Footer.module.scss';
 import Header from '../components/Header';
+import Head from 'next/head';
 
 const LegalNotice = () => {
     return (
         <>
+            <Head>
+                <title>Blog Sobre Criptomonedas | Aviso legal</title>
+                <meta name="description"
+                    content="Aviso legal de CryptoXChange, un blog de criptomonedas." />
+                <link rel="icon" href="/logoCXC.png" />
+            </Head>
             <Header />
             <Container className={styles.legalnotice}>
                 <h1>Aviso legal</h1>

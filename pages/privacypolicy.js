@@ -1,9 +1,17 @@
 import { Container } from "react-bootstrap";
 import Header from '../components/Header';
 import styles from '../styles/footer/Footer.module.scss';
+import Head from 'next/head'
+
 const PrivacyPolicy = () => {
     return (
         <>
+            <Head>
+                <title>Blog Sobre Criptomonedas | Política de privacidad</title>
+                <meta name="description"
+                    content="CryptoXChange, nuestra política de privacidad sobre gestión de datos." />
+                <link rel="icon" href="/logoCXC.png" />
+            </Head>
             <Header />
             <Container className={styles.privacypolicy}>
                 <h1>Política de privacidad</h1>
