@@ -40,7 +40,7 @@ const ExchangesComponent = ({ exchanges }) => {
   return (
     <>
       <Header />
-      <Container>
+      <Container style={{'height': '100%'}}>
         <h1 className='mt-4'>Nuestros exchanges de Criptomonedas</h1>
         <p>Llévate hasta 100 euros de bono en tu primera compra</p>
         <Row>
