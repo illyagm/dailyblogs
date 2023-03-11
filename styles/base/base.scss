@@ -5,6 +5,10 @@
   margin: 0;
   box-sizing: border-box;
   color: $grey50;
+
+  .cg-container {
+    border: none !important;
+  }
 }
 
 body {
@@ -40,15 +44,17 @@ img {
   border-radius: 2%;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5rem;
   padding: 1rem 0rem;
   font-size: 1rem;
   margin-bottom: 0 !important;
-  
+
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: 1.5rem;
 }
 
@@ -64,7 +70,6 @@ a {
   }
 }
 
-
 // navbar tweaks
 .navbar {
   padding: 1.1rem 1rem;
@@ -75,6 +80,7 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 5rem;
+
   .navbar-collapse {
     width: 100%;
   }
@@ -89,9 +95,11 @@ nav {
 
 .ledgerComponentSlug {
   display: none;
+
   a {
     padding-top: 11rem !important;
   }
+
   @media screen and (min-width: $tablet) {
     display: flex;
   }
@@ -99,9 +107,11 @@ nav {
 
 .ledgerComponent {
   display: none;
+
   a {
     padding-top: 11rem !important;
   }
+
   @media screen and (min-width: $tablet) {
     display: block;
   }
@@ -109,13 +119,15 @@ nav {
 
 .ledgerComponentMobile {
   display: none;
-  @media screen and (min-width:  $desktop-medium) {
+
+  @media screen and (min-width: $desktop-medium) {
     display: block;
   }
 }
 
 .ledgerComponentMobileXS {
   display: none;
+
   @media screen and (min-width: 401px) and (max-width: $tablet) {
     display: block;
   }
@@ -123,6 +135,7 @@ nav {
 
 .ledgerComponentMobileXXS {
   display: none;
+
   @media screen and (max-width:400px) {
     display: block;
   }
@@ -149,10 +162,11 @@ nav {
 
 .dropdown-menu {
   background-color: rgb(33, 37, 41) !important;
+
   .dropdown-item {
     color: rgba(255, 255, 255, 0.5490196078);
     font-size: medium;
-  }  
+  }
 }
 
 .socialShareContainer {
