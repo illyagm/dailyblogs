@@ -5,9 +5,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from '../styles/header/Header.module.scss';
 import { useRouter } from 'next/router';
-//import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
-// Component import
-import CryptoPrices from './CryptoPrices';
 import WelcomeComponent from '../components/HomeWelcome';
 
 const Header = () => {
@@ -32,15 +29,15 @@ const Header = () => {
                                 <NavDropdown.Item eventKey="2" href="/calculadora" className={router.pathname == '/calculadora' ? 'active' : ''}>Calculadora Staking</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
-                        <Nav>
-                            <Nav.Link className='justify-content-end'><CryptoPrices /></Nav.Link>
-                        </Nav>
+                       
                         <Nav className={styles.buttonExchange}><Button href="https://www.binance.com/en/activity/referral-entry/CPA?fromActivityPage=true&ref=CPA_00ELJGV9UV" target="_blank" variant='secondary'>
-                            ¡Invierte y llévate <b>100$</b> de bono!
+                            ¡Con Binance <b>100$</b> de bono!
                         </Button></Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+            <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,polkadot,litecoin,shiba-inu,dogecoin,flow" style={{ padding: '0' }} currency="eur" background-color="#ffffff" locale="es"></coingecko-coin-price-marquee-widget>
             {router.pathname == '/' ? <WelcomeComponent /> : ''}
         </Row>
     );
