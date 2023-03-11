@@ -37,7 +37,7 @@ const Header = () => {
                 </Container>
             </Navbar>
             <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
-            <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,polkadot,litecoin,shiba-inu,dogecoin,flow" style={{ padding: '0' }} currency="eur" background-color="#ffffff" locale="es"></coingecko-coin-price-marquee-widget>
+            <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,polkadot,litecoin,shiba-inu,dogecoin,flow" style={{ padding: '0' }} currency="eur" background-color="#F0F0F0" locale="es"></coingecko-coin-price-marquee-widget>
             {router.pathname == '/' ? <WelcomeComponent /> : ''}
         </Row>
     );
