@@ -16,9 +16,11 @@
 .welcometext {
     position: absolute;
     top: 20%;
+    h1 {
+        font-size: 2rem;
+    }
     @media screen and (max-width: $desktop-medium) {
         position: relative;
-        padding: 0 3rem;
       }
 }
 
