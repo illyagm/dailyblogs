@@ -126,7 +126,7 @@ const Article = ({ post }) => {
                                     <SocialShare articleLink={post.slug} articleTitle={post.title} />
                                     <hr />
                                     <div className={styles.authdetails}>
-                                        <img src={post.author.avatar.url} alt='' />
+                                        <img src={post.author.avatar.url || ''} alt='' />
                                         <div className={styles.authtext}>
                                             <span>
                                                 By {post.author.name}
