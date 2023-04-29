@@ -2,16 +2,23 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  i18n : {
+  i18n: {
     locales: ["es"],
     default: ["es"]
   }
 }
 
-module.exports = nextConfig
-
-// CORS
+// images
 module.exports = {
+  nextConfig: nextConfig,
+  images: {
+    domains: ['media.graphassets.com'],
+  },
+  // Control the rate limit for avoiding 'too many requests' while generating static pages
+  experimental: {
+    workerThreads: false,
+    cpus: 1
+  },
   async headers() {
     return [
       {
@@ -26,11 +33,4 @@ module.exports = {
       }
     ]
   }
-};
-
-// images
-module.exports = {
-  images: {
-    domains: ['media.graphassets.com'],
-  },
 }
