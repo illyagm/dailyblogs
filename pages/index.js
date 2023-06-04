@@ -8,12 +8,11 @@ import { Col, Row } from 'react-bootstrap';
 import Head from 'next/head'
 import ScrollToTop from '../components/ScrollUpButton';
 import LedgerAffiliate from '../components/LedgerAffiliate';
-
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL);
 
 const QUERY = gql`
   {
-    posts {
+    posts (orderBy: createdAt_DESC){
       id
       title
       slug
