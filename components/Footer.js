@@ -5,7 +5,7 @@ const Footer = () => {
         <>
             <div className={styles.footer + ' justify-content-md-center'}>
                 <Row>
-                    <Col md={4} sm={4} activeKey="/home">
+                    <Col md={4} sm={4} activekey="/home">
                         <Nav.Item>
                             <Nav.Link href="/legalnotice">Aviso Legal</Nav.Link>
                         </Nav.Item>

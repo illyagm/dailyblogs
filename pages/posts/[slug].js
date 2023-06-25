@@ -73,7 +73,7 @@ export async function getStaticProps({ params }) {
 
 
 const Article = ({ post }) => {
-    let postId = post.id
+    let postId = post.id;
 
     async function updatePost() {
         let pageViewsCount = post.pageViews + 1;
