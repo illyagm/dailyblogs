@@ -12,7 +12,7 @@ const IncomeCalculator = () => {
     const CalculateAPY = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
-        const investAmount = formData.get('investAmount');
+        let investAmount = formData.get('investAmount');
         const APYPercentatge = formData.get('APYPercentatge') / 100;
         const isCompoundInterest = event.target.isCompoundInterest.checked;
         const totals = 0;
