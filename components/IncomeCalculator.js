@@ -2,8 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import styles from '../styles/footer/Footer.module.scss';
 import { Row, Col } from 'react-bootstrap';
 
 
@@ -42,8 +41,7 @@ const IncomeCalculator = () => {
 
     return (
         <>
-            <Header />
-            <Container fluid style={{ 'height': '100vh' }}>
+            <Container fluid className={styles.calculator}>
                 <Row className='d-flex align-items-center'>
                     <Col md={{ span: 6, offset: 3 }} className="mt-4">
                         <h3>Calculadora de Staking</h3>
@@ -79,7 +77,6 @@ const IncomeCalculator = () => {
                     </Col>
                 </Row>
             </Container>
-            <Footer />
         </>
     )
 }

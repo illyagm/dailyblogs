@@ -51,11 +51,10 @@ export default function Home({ posts }) {
       <Head>
         <title>Blog Sobre Criptomonedas | Guías y consejos para invertir</title>
         <meta name="description"
-          content="Blog personal con opiniones, guías y consejos sobre el mundo de las Criptomonedas tales como Bitcoin, Ethereum." />
+          content="Opiniones, guías y consejos sobre el mundo de las Criptomonedas tales como Bitcoin, Ethereum." />
         <link rel="icon" href="/logoCXC.png" />
       </Head>
       <Container fluid>
-        <Header />
         <Container className={styles.containerblogs}>
           <Row className='justify-content-center'>
             {posts.map((post) => (
@@ -76,7 +75,6 @@ export default function Home({ posts }) {
         <LedgerAffiliate isArticle={false} />
       </Container>
       <ScrollToTop />
-      <Footer />
     </>
   )
 }

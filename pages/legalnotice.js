@@ -12,7 +12,6 @@ const LegalNotice = () => {
                     content="Aviso legal de CryptoXChange, un blog de criptomonedas." />
                 <link rel="icon" href="/logoCXC.png" />
             </Head>
-            <Header />
             <Container className={styles.legalnotice}>
                 <h1>Aviso legal</h1>
                 <p>Este aviso legal establece las condiciones de uso del sitio web cryptoxchange.es. Por favor, lea detenidamente estas condiciones antes de utilizar nuestro sitio web. Al utilizar nuestro sitio web, usted acepta estas condiciones.</p>

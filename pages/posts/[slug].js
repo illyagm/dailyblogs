@@ -116,7 +116,6 @@ const Article = ({ post }) => {
                 <link rel="icon" href="/logoCXC.png" />
             </Head>
             <div>
-                <Header />
                 <main className={styles.blog}>
                     <Row>
                         <Col md="9">
@@ -153,7 +152,6 @@ const Article = ({ post }) => {
                     <ScrollToTop />
                 </main>
             </div>
-            <Footer />
         </>
     );
 }

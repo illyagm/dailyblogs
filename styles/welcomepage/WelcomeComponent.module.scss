@@ -21,9 +21,10 @@
     }
     @media screen and (max-width: $desktop-medium) {
         position: relative;
+        padding: .75rem;
       }
 }
 
 .accenttext {
     color: #E2B658 !important;
-  }
+}

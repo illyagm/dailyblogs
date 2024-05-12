@@ -12,7 +12,6 @@ const PrivacyPolicy = () => {
                     content="CryptoXChange, nuestra política de privacidad sobre gestión de datos." />
                 <link rel="icon" href="/logoCXC.png" />
             </Head>
-            <Header />
             <Container className={styles.privacypolicy}>
                 <h1>Política de privacidad</h1>
                 <p>No recopilamos datos personales en este sitio web de blog.</p>
