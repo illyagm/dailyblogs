@@ -11,11 +11,11 @@ const IncomeCalculator = () => {
     const [total, setTotal] = useState(0);
     const CalculateAPY = (event) => {
         event.preventDefault();
-        const formData = new FormData(event.target);
-        const investAmount = formData.get('investAmount');
-        const APYPercentatge = formData.get('APYPercentatge') / 100;
-        const isCompoundInterest = event.target.isCompoundInterest.checked;
-        const totals = 0;
+        let formData = new FormData(event.target);
+        let investAmount = formData.get('investAmount');
+        let APYPercentatge = formData.get('APYPercentatge') / 100;
+        let isCompoundInterest = event.target.isCompoundInterest.checked;
+        let totals = 0;
         if ((investAmount !== null) && (APYPercentatge !== '')) {
             totals = investAmount * APYPercentatge;
             if (isCompoundInterest) {
