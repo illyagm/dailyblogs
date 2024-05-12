@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 import styles from "../styles/footer/Footer.module.scss";
-import Header from "../components/Header";
 import Head from 'next/head'
 
 const ContactPage = () => {
@@ -12,7 +11,6 @@ const ContactPage = () => {
                     content="¿Tienes alguna duda? ¡Utiliza esta página de contacto!" />
                 <link rel="icon" href="/logoCXC.png" />
             </Head>
-            <Header />
             <Container className={styles.contactpage}>
                 <h1>Contacto</h1>
                 <p>Gracias por visitar nuestro sitio web. Si tiene alguna pregunta o inquietud sobre nuestro contenido, por favor no dude en ponerse en contacto con nosotros.</p>
