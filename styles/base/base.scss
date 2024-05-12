@@ -181,3 +181,11 @@ nav {
     margin-right: 0.25rem;
   }
 }
+
+.CookieConsent {
+  background: $dark-main !important;
+  justify-content: center !important;
+  div {
+    color: $accent-gold;
+  }
+}
