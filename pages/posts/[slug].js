@@ -1,6 +1,5 @@
 import styles from '../../styles/slug/Slug.module.scss';
 import { GraphQLClient, gql } from 'graphql-request';
-import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Head from 'next/head'
 import ScrollToTop from '../../components/ScrollUpButton';
