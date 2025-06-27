@@ -31,8 +31,8 @@ const Header = () => {
                             <Nav.Link className={router.pathname == '/posts/billetera-ledger' ? 'active' : ''} href="/posts/billetera-ledger">Ledger Nano</Nav.Link>
                         </Nav>
                        
-                        <Nav className={styles.buttonExchange}><Button href="https://www.binance.com/en/activity/referral-entry/CPA?fromActivityPage=true&ref=CPA_00ELJGV9UV" target="_blank" variant='secondary'>
-                            ¡Con Binance <b>100$</b> de bono en comisiones!
+                        <Nav className={styles.buttonExchange}><Button href="https://shop.ledger.com/?r=a77d8a211939" target="_blank" variant='secondary'>
+                            Compra Ledger - Protege tus activos
                         </Button></Nav>
                     </Navbar.Collapse>
                 </Container>
