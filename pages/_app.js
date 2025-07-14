@@ -5,10 +5,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CookieConsent from "react-cookie-consent";
 import styles from "../styles/base/base.scss";
+import { SSRProvider } from 'react-bootstrap';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <SSRProvider>
         <Header />
         <Component {...pageProps} />
         <CookieConsent
@@ -19,7 +20,7 @@ function MyApp({ Component, pageProps }) {
         >Este sitio web utiliza cookies para mejorar la experiencia de usuario. Continuando aquí aceptas las condiciones.</CookieConsent>
         <Analytics />
         <Footer />
-    </>
+    </SSRProvider>
   )
 }
 

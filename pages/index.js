@@ -12,7 +12,7 @@ const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_U
 
 const QUERY = gql`
   {
-    posts (orderBy: createdAt_DESC){
+    posts (first: 100, orderBy: createdAt_DESC){
       id
       title
       slug
