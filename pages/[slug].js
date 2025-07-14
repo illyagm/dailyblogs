@@ -42,7 +42,7 @@ query Post($slug: String!) {
 
 const SLUGLIST = gql`
     {
-        posts(stage: PUBLISHED) {
+        posts(first: 100, stage: PUBLISHED) {
             slug
         }
     }
