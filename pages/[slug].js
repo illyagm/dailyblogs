@@ -1,11 +1,11 @@
-import styles from '../../styles/slug/Slug.module.scss';
+import styles from '../styles/slug/Slug.module.scss';
 import { GraphQLClient, gql } from 'graphql-request';
-import Footer from '../../components/Footer';
+import Footer from '../components/Footer';
 import Head from 'next/head'
-import ScrollToTop from '../../components/ScrollUpButton';
+import ScrollToTop from '../components/ScrollUpButton';
 import { Row, Col } from 'react-bootstrap';
-import LedgerAffiliate from '../../components/LedgerAffiliate';
-import SocialShare from '../../components/SocialShare';
+import LedgerAffiliate from '../components/LedgerAffiliate';
+import SocialShare from '../components/SocialShare';
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL, {
     headers: {
@@ -42,7 +42,7 @@ query Post($slug: String!) {
 
 const SLUGLIST = gql`
     {
-        posts {
+        posts(stage: PUBLISHED) {
             slug
         }
     }

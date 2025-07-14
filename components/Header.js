@@ -28,7 +28,7 @@ const Header = () => {
                                 <NavDropdown.Item href="/exchanges" className={router.pathname == '/exchanges' ? 'active' : ''}>Plataformas Trading</NavDropdown.Item>
                                 <NavDropdown.Item eventKey="2" href="/calculadora" className={router.pathname == '/calculadora' ? 'active' : ''}>Calculadora Staking</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link className={router.pathname == '/posts/billetera-ledger' ? 'active' : ''} href="/posts/billetera-ledger">Ledger Nano</Nav.Link>
+                            <Nav.Link className={router.pathname == '/billetera-ledger' ? 'active' : ''} href="/billetera-ledger">Ledger Nano</Nav.Link>
                         </Nav>
                        
                         <Nav className={styles.buttonExchange}><Button href="https://shop.ledger.com/?r=a77d8a211939" target="_blank" variant='secondary'>

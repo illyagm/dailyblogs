@@ -14,7 +14,7 @@ const SocialShare = ({ articleLink, articleTitle }) => {
         <>
             <div className="socialShareContainer">
                 <FacebookShareButton
-                    url={'https://cryptoxchange.es/posts/' + articleLink}
+                    url={'https://cryptoxchange.es/' + articleLink}
                     quote={articleTitle}
                     hashtag={'#cryptoxchangeblog #crypto'}
                     blankTarget={'true'}
@@ -24,7 +24,7 @@ const SocialShare = ({ articleLink, articleTitle }) => {
 
 
                 <TwitterShareButton
-                    url={'https://cryptoxchange.es/posts/' + articleLink}
+                    url={'https://cryptoxchange.es/' + articleLink}
                     title={articleTitle}
                     blankTarget={'true'}
                 >
@@ -33,7 +33,7 @@ const SocialShare = ({ articleLink, articleTitle }) => {
 
 
                 <TelegramShareButton
-                    url={'https://cryptoxchange.es/posts/' + articleLink}
+                    url={'https://cryptoxchange.es/' + articleLink}
                     title={articleTitle}
                     blankTarget={'true'}
                 >
@@ -42,7 +42,7 @@ const SocialShare = ({ articleLink, articleTitle }) => {
 
 
                 <WhatsappShareButton
-                    url={'https://cryptoxchange.es/posts/' + articleLink}
+                    url={'https://cryptoxchange.es/' + articleLink}
                     title={articleTitle}
                     blankTarget={'true'}
                     separator=" "

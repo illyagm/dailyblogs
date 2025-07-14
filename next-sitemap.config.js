@@ -2,5 +2,7 @@
 module.exports = {
     siteUrl: process.env.SITE_URL || 'https://www.cryptoxchange.es/',
     generateRobotsTxt: true,
-    sitemapSize: 100,
+    changefreq: 'daily',
+    priority: 0.7,
+    sitemapSize: 5000,
 }

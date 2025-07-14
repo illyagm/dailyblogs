@@ -6,12 +6,12 @@ import styles from '../styles/blogcard/BlogCard.module.scss';
 const blogPost = ({ title, content, coverPhoto, pageViews, slug, altDescriptionImg }) => {
     return (
         <Container className={styles.card + ' g-0'}>
-            <Link href={'/posts/' + slug}>
+            <Link href={slug}>
                 <div className={styles.imgContainer}>
                     <img src={coverPhoto.url} alt={altDescriptionImg} />
                 </div>
             </Link>
-            <Link href={'/posts/' + slug}>
+            <Link href={slug}>
                 <div className={styles.text}>
                     <h2 className={styles.title}>{title}</h2>
                     <div className={styles.date}>
