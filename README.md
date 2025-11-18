@@ -25,6 +25,8 @@ Platform for publishing blogs, built with Next.js. The goal is to provide a fast
 <img width="1907" height="912" alt="image" src="https://github.com/user-attachments/assets/2bd7cbfd-5892-40fa-8c38-3491e1e4f256" />
 <img width="1912" height="913" alt="image" src="https://github.com/user-attachments/assets/fb68680e-b842-4c33-93e2-6d6ff18be4d5" />
 <img width="858" height="59" alt="image" src="https://github.com/user-attachments/assets/32ca646f-ee96-4953-af65-02f956ebd4f1" />
+<img width="1912" height="58" alt="image" src="https://github.com/user-attachments/assets/5564aa65-161f-4dde-8a84-4302663f7445" />
+
 
 For more detailed view, visit our website: https://www.cryptoxchange.es/
 
