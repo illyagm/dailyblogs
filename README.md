@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DailyBlogs
 
-## Getting Started
+Platform for publishing blogs, built with Next.js. The goal is to provide a fast, clean and minimalistic experience for writing and reading content without distractions.
 
-First, run the development server:
+## Features
+
+* Post publishing
+* Simple and responsive interface
+* Optional WebSocket to display real-time cryptocurrency prices
+* Affiliate marketing integration
+* Legal compliance through required pages and cookie‑consent popup
+* Integrated analytics to monitor website activity
+
+## Stack
+
+* **Next.js**
+* **SCSS** for styling
+* **CoinGecko WebSocket** for real‑time data
+* **Hygraph** as the content management system
+* **graphql-request** for content fetching
+* **Vercel** for deployments and analytics
+* **vercel-sitemap** to improve SEO
+
+## Screenshots
+<img width="1907" height="912" alt="image" src="https://github.com/user-attachments/assets/2bd7cbfd-5892-40fa-8c38-3491e1e4f256" />
+<img width="1912" height="913" alt="image" src="https://github.com/user-attachments/assets/fb68680e-b842-4c33-93e2-6d6ff18be4d5" />
+<img width="858" height="59" alt="image" src="https://github.com/user-attachments/assets/32ca646f-ee96-4953-af65-02f956ebd4f1" />
+
+https://www.cryptoxchange.es/
+
+## Installation
 
 ```bash
+git clone https://github.com/illyagm/dailyblogs.git
+cd dailyblogs
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Production build
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Configuration – ENV vars
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+# .env
+NEXT_PUBLIC_PROD_TOKEN_POSTS=
+NEXT_PUBLIC_HYGRAPH_PROJECT_API_URL=
+```
 
-## Learn More
+## Roadmap
 
-To learn more about Next.js, take a look at the following resources:
+* Visual improvements
+* Article pagination
+* Comment system
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT
